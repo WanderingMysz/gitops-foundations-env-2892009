@@ -1,2 +1,3 @@
 #!/bin/bash
-find . -type f -exec sed -i 's/{dockerHubUsername}/'$1'/g' {} +
+LC_ALL=C find . -type f \( -name '*.yaml' -o -name '*.yml' \) \
+  -exec sed -i '' "s/{dockerHubUsername}/$1/g" {} +
